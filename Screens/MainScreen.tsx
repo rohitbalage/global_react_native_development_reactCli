@@ -13,7 +13,29 @@ const MainScreen: React.FC<MainScreenProps> = ({ navigation }) => {
     { id: 2, text: 'Native Programming' },
     { id: 3, text: 'API Integration' },
     { id: 4, text: 'Notifications' },
+    { id: 5, text: 'React Hooks' },
+    { id: 6, text: 'Databases' },
+    { id: 7, text: 'Animations' },
+    { id: 8, text: 'Security' },
+    { id: 9, text: 'State Management' },
+    { id: 10, text: 'Theming & Styling' },
+    { id: 11, text: 'Debugging' },
+    { id: 12, text: 'Performance Optimization' },
+    { id: 13, text: 'Testing' },
+    { id: 14, text: 'Forms & Validation' },
+    { id: 15, text: 'Navigation' },
+    { id: 16, text: 'Media Handling (Audio/Video)' },
+    { id: 17, text: 'Maps & Geolocation' },
+    { id: 18, text: 'Authentication' },
+    { id: 19, text: 'Dynamic Links' },
+    { id: 20, text: 'Push Notifications' },
+    { id: 21, text: 'Offline Storage' },
+    { id: 22, text: 'Bluetooth Integration' },
+    { id: 23, text: 'Custom Native Modules' },
+    { id: 24, text: 'Device Sensors (Gyroscope, Accelerometer)' },
+    { id: 25, text: 'Wearable App Integration' },
   ];
+  
 
   return (
     <View style={styles.container}>
