@@ -35,8 +35,6 @@ const MainScreen: React.FC<MainScreenProps> = ({ navigation }) => {
     { id: 24, text: 'Device Sensors (Gyroscope, Accelerometer)' },
     { id: 25, text: 'Wearable App Integration' },
   ];
-  
-
   return (
     <View style={styles.container}>
       {/* Header with background image */}
