@@ -6,6 +6,7 @@ import MainScreen from './Screens/MainScreen';
 import NotificationScreen from './Screens/Notifications/notifications';
 import APIIntegrationScreen from './Screens/APIs/API';
 import AnimationScreen from './Screens/Animation/Animation';
+import MapsGeolocationScreen from './Screens/Maps/GoogleMaps';
 
 
 export type RootStackParamList = {
@@ -14,6 +15,7 @@ export type RootStackParamList = {
   Notifications:undefined;
   APIIntegration:undefined; // No params for ReactComponents
   Animation:undefined;
+  MapsAndGeolocation: undefined;
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -27,6 +29,7 @@ const App = () => {
         <Stack.Screen name="Notifications" component={NotificationScreen} options={{ title: 'Notifications' }} />
         <Stack.Screen name="APIIntegration" component={APIIntegrationScreen} options={{ title: 'APIs' }} />
         <Stack.Screen name="Animation" component={AnimationScreen} options={{ title: 'Animation' }} />
+        <Stack.Screen name="MapsAndGeolocation" component={MapsGeolocationScreen} options={{ title: 'MapsAndGeolocationScreen' }} />
       </Stack.Navigator>
     </NavigationContainer>
   );
