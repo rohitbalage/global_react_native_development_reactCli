@@ -8,6 +8,7 @@ import APIIntegrationScreen from './Screens/APIs/API';
 import AnimationScreen from './Screens/Animation/Animation';
 import MapsGeolocationScreen from './Screens/Maps/GoogleMaps';
 import MediaHandlingScreen from './Screens/MediaHandling/MediaHandling';
+import FormsAndValidationScreen from './Screens/FormsAndValidation/FormsAndValidation';
 
 
 export type RootStackParamList = {
@@ -18,6 +19,7 @@ export type RootStackParamList = {
   Animation:undefined;
   MapsAndGeolocation: undefined;
   MediaHandling: undefined;
+  FormsAndValidation:undefined;
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -33,6 +35,7 @@ const App = () => {
         <Stack.Screen name="Animation" component={AnimationScreen} options={{ title: 'Animation' }} />
         <Stack.Screen name="MapsAndGeolocation" component={MapsGeolocationScreen} options={{ title: 'MapsAndGeolocationScreen' }} />
         <Stack.Screen name="MediaHandling" component={MediaHandlingScreen} options={{ title: 'MediaHandlingScreen' }} />
+        <Stack.Screen name="FormsAndValidation" component={FormsAndValidationScreen} options={{ title: 'Forms And Validation' }} />
       </Stack.Navigator>
     </NavigationContainer>
   );
