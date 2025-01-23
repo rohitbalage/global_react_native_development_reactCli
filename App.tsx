@@ -5,6 +5,7 @@ import ReactComponentsScreen from './Screens/ReactComponents/ReactComponents';
 import MainScreen from './Screens/MainScreen';
 import NotificationScreen from './Screens/Notifications/notifications';
 import APIIntegrationScreen from './Screens/APIs/API';
+import AnimationScreen from './Screens/Animation/Animation';
 
 
 export type RootStackParamList = {
@@ -12,6 +13,7 @@ export type RootStackParamList = {
   ReactComponents: undefined;
   Notifications:undefined;
   APIIntegration:undefined; // No params for ReactComponents
+  Animation:undefined;
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -24,6 +26,7 @@ const App = () => {
         <Stack.Screen name="ReactComponents" component={ReactComponentsScreen} options={{ title: 'React Components' }} />
         <Stack.Screen name="Notifications" component={NotificationScreen} options={{ title: 'Notifications' }} />
         <Stack.Screen name="APIIntegration" component={APIIntegrationScreen} options={{ title: 'APIs' }} />
+        <Stack.Screen name="Animation" component={AnimationScreen} options={{ title: 'Animation' }} />
       </Stack.Navigator>
     </NavigationContainer>
   );

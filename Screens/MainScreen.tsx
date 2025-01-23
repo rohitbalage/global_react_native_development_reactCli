@@ -64,6 +64,9 @@ const MainScreen: React.FC<MainScreenProps> = ({ navigation }) => {
               if (button.text === 'API Integration') {
                 navigation.navigate('APIIntegration'); // Navigate to React Components screen
               }
+              if (button.text === 'Animations') {
+                navigation.navigate('Animation'); // Navigate to React Components screen
+              }
             }}
           >
             <Text style={styles.buttonText}>{button.text}</Text>
