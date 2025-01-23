@@ -70,6 +70,9 @@ const MainScreen: React.FC<MainScreenProps> = ({ navigation }) => {
               if (button.text === 'Maps & Geolocation') {
                 navigation.navigate('MapsAndGeolocation'); // Navigate to React Components screen
               }
+              if (button.text === 'Media Handling (Audio/Video)') {
+                navigation.navigate('MediaHandling'); // Navigate to React Components screen
+              }
             }}
           >
             <Text style={styles.buttonText}>{button.text}</Text>
