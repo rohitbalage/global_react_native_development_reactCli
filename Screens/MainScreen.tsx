@@ -19,15 +19,15 @@ const MainScreen: React.FC<MainScreenProps> = ({ navigation }) => {
     { id: 8, text: 'Security' },
     { id: 9, text: 'State Management' },
     { id: 10, text: 'Theming & Styling' },
-    { id: 11, text: 'Debugging' },
-    { id: 12, text: 'Performance Optimization' },
+    { id: 11, text: 'React Notes' },
+    { id: 12, text: 'Google APIs' },
     { id: 13, text: 'Testing' },
     { id: 14, text: 'Forms & Validation' },
     { id: 15, text: 'Navigation' },
     { id: 16, text: 'Media Handling (Audio/Video)' },
     { id: 17, text: 'Maps & Geolocation' },
     { id: 18, text: 'Authentication' },
-    { id: 19, text: 'Dynamic Links' },
+    { id: 19, text: 'App Widgets' },
     { id: 20, text: 'Push Notifications' },
     { id: 21, text: 'Offline Storage' },
     { id: 22, text: 'Bluetooth Integration' },
@@ -75,6 +75,9 @@ const MainScreen: React.FC<MainScreenProps> = ({ navigation }) => {
               }
               if (button.text === 'Forms & Validation') {
                 navigation.navigate('FormsAndValidation'); // Navigate to React Components screen
+              }
+              if (button.text === 'Google APIs') {
+                navigation.navigate('GoogleAPIs'); // Navigate to React Components screen
               }
             }}
           >
