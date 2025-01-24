@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import {
   View,
   Text,
@@ -11,22 +11,38 @@ import Video from 'react-native-video';
 
 const MediaHandlingScreen: React.FC = () => {
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+  const soundRef = useRef<Sound | null>(null); // Use a ref to manage audio instance
 
   // Audio Playback
   const playAudio = () => {
-    const sound = new Sound(
-      'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3',
+    if (soundRef.current) {
+      soundRef.current.stop(() => soundRef.current?.release());
+    }
+    soundRef.current = new Sound(
+      'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-17.mp3',
       '',
       (error) => {
         if (error) {
           Alert.alert('Error', 'Failed to load audio');
           return;
         }
-        sound.play(() => {
-          sound.release(); // Release the audio resource when done
+        soundRef.current?.play(() => {
+          soundRef.current?.release(); // Release the audio resource when done
+          soundRef.current = null;
         });
       }
     );
+  };
+
+  const stopAudio = () => {
+    if (soundRef.current) {
+      soundRef.current.stop(() => {
+        soundRef.current?.release();
+        soundRef.current = null;
+      });
+    } else {
+      Alert.alert('Audio', 'No audio is playing');
+    }
   };
 
   // Video Playback
@@ -42,9 +58,14 @@ const MediaHandlingScreen: React.FC = () => {
       {/* Audio Playback */}
       <View style={styles.section}>
         <Text style={styles.subheading}>Audio Playback</Text>
-        <TouchableOpacity style={styles.button} onPress={playAudio}>
-          <Text style={styles.buttonText}>Play Audio</Text>
-        </TouchableOpacity>
+        <View style={styles.row}>
+          <TouchableOpacity style={styles.button} onPress={playAudio}>
+            <Text style={styles.buttonText}>Play Audio</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.button} onPress={stopAudio}>
+            <Text style={styles.buttonText}>Stop Audio</Text>
+          </TouchableOpacity>
+        </View>
       </View>
 
       {/* Video Playback */}
