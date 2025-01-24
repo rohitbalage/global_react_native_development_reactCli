@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "983495492257",
+    "project_id": "reactnativepractice-199de",
+    "storage_bucket": "reactnativepractice-199de.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:983495492257:android:44e8fb4ba86e480cbf66e0",
+        "android_client_info": {
+          "package_name": "com.reactnativepracticeapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXCQXoaUAp4gSqdNZCvGj6NmfKCn5Aep4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

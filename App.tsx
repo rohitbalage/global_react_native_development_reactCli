@@ -10,6 +10,9 @@ import MapsGeolocationScreen from './Screens/Maps/GoogleMaps';
 import MediaHandlingScreen from './Screens/MediaHandling/MediaHandling';
 import FormsAndValidationScreen from './Screens/FormsAndValidation/FormsAndValidation';
 import GoogleApisScreen from './Screens/Google APIs/GoogleAPIs';
+import StateManagementScreen from './Screens/StateManagement/StateManagement';
+import DatabaseScreen from './Screens/Databases/Databases';
+import FirebaseScreen from './Screens/Databases/Firebase/Firebase';
 
 
 export type RootStackParamList = {
@@ -22,6 +25,9 @@ export type RootStackParamList = {
   MediaHandling: undefined;
   FormsAndValidation:undefined;
   GoogleAPIs: undefined;
+  StateManagement: undefined;
+  Databases: undefined;
+  Firebase: undefined;
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -35,10 +41,13 @@ const App = () => {
         <Stack.Screen name="Notifications" component={NotificationScreen} options={{ title: 'Notifications' }} />
         <Stack.Screen name="APIIntegration" component={APIIntegrationScreen} options={{ title: 'APIs' }} />
         <Stack.Screen name="Animation" component={AnimationScreen} options={{ title: 'Animation' }} />
-        <Stack.Screen name="MapsAndGeolocation" component={MapsGeolocationScreen} options={{ title: 'MapsAndGeolocationScreen' }} />
-        <Stack.Screen name="MediaHandling" component={MediaHandlingScreen} options={{ title: 'MediaHandlingScreen' }} />
+        <Stack.Screen name="MapsAndGeolocation" component={MapsGeolocationScreen} options={{ title: 'Maps And Geolocation Screen' }} />
+        <Stack.Screen name="MediaHandling" component={MediaHandlingScreen} options={{ title: 'Media Handling Screen' }} />
         <Stack.Screen name="FormsAndValidation" component={FormsAndValidationScreen} options={{ title: 'Forms And Validation' }} />
         <Stack.Screen name="GoogleAPIs" component={GoogleApisScreen} options={{ title: 'Google Cloud APIs' }} />
+        <Stack.Screen name="StateManagement" component={StateManagementScreen} options={{ title: 'State Management in React Native' }} />
+        <Stack.Screen name="Databases" component={DatabaseScreen} options={{ title: 'Databases in React Native' }} />
+        <Stack.Screen name="Firebase" component={FirebaseScreen} options={{ title: 'Firebase' }} />
       </Stack.Navigator>
     </NavigationContainer>
   );

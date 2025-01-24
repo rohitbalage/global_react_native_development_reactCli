@@ -79,6 +79,12 @@ const MainScreen: React.FC<MainScreenProps> = ({ navigation }) => {
               if (button.text === 'Google APIs') {
                 navigation.navigate('GoogleAPIs'); // Navigate to React Components screen
               }
+              if (button.text === 'State Management') {
+                navigation.navigate('StateManagement'); // Navigate to React Components screen
+              }
+              if (button.text === 'Databases') {
+                navigation.navigate('Databases'); // Navigate to React Components screen
+              }
             }}
           >
             <Text style={styles.buttonText}>{button.text}</Text>
