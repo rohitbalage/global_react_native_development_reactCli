@@ -12,7 +12,20 @@
           "package_name": "com.reactnativepracticeapp"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "983495492257-31hjofacs3fhp3ivr1835jva1le6kupq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.reactnativepracticeapp",
+            "certificate_hash": "d16d98d0878bff48a2a87ec1ac60dcf27d28243a"
+          }
+        },
+        {
+          "client_id": "983495492257-bcdci0sdq9bcdkmu8j74gou96nrmojk0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyDXCQXoaUAp4gSqdNZCvGj6NmfKCn5Aep4"
@@ -20,7 +33,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "983495492257-bcdci0sdq9bcdkmu8j74gou96nrmojk0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }
